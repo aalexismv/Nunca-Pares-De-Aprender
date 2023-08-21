@@ -1,0 +1,95 @@
+.home-main-button,
+.home-main-button *,
+.home-main-button :after,
+.home-main-button :before,
+.home-main-button:after,
+.home-main-button:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+.home-main-button {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: #000;
+  background-image: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 100%;
+  font-weight: 900;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  padding: 0;
+  text-transform: uppercase;
+}
+.home-main-button:disabled {
+  cursor: default;
+}
+.home-main-button:-moz-focusring {
+  outline: auto;
+}
+.home-main-button svg {
+  display: block;
+  vertical-align: middle;
+}
+.home-main-button [hidden] {
+  display: none;
+}
+.home-main-button {
+  border-radius: 99rem;
+  border-width: 2px;
+  overflow: hidden;
+  padding: 0.8rem 3rem;
+  position: relative;
+}
+.home-main-button span {
+  mix-blend-mode: difference;
+}
+.home-main-button:before {
+  -webkit-animation: move-out 0.3s;
+  animation: move-out 0.3s;
+  background: #fff;
+  content: "";
+  height: 100%;
+  left: -100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  will-change: transform;
+}
+.home-main-button:hover:before {
+  -webkit-animation: move-in 0.3s forwards;
+  animation: move-in 0.3s forwards;
+}
+@-webkit-keyframes move-in {
+  0% {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+@keyframes move-in {
+  0% {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+@-webkit-keyframes move-out {
+  0% {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(200%);
+  }
+}
+@keyframes move-out {
+  0% {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(200%);
+  }
+}
